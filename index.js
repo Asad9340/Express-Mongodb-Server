@@ -5,26 +5,29 @@ const users = [
   {
     id: 1,
     name: 'Asad',
-    email:'asad@gmail.com',
+    email: 'asad@gmail.com',
   },
   {
     id: 2,
     name: 'Emran',
-    email:'emran@gmail.com',
+    email: 'emran@gmail.com',
   },
   {
     id: 3,
     name: 'Emon',
-    email:'emon@gmail.com',
-  }
-]
-app.get('/', (req, res) => {
-  res.send('Hello there ,This is my first server project run 1');
-})
-app.get('/data', (req, res) => {
-  res.send('Hello there ,This is my first server  projects run 2');
+    email: 'emon@gmail.com',
+  },
+];
+    app.get('/', (req, res) => {
+      res.send('Hello there ,This is my first server project run 1');
+    });
+
+
+app.get('/users', (req, res) => {
+  res.send(users);
 })
 
-app.listen(port, () => {
-  console.log(`the app is listening on port ${port}`);
-})
+
+    app.listen(port, () => {
+      console.log(`the app is listening on port ${port}`);
+    });
